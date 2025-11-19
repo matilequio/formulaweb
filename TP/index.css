@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(12, 12, 40);
+    font-family: "Tomorrow", sans-serif;
+}
+
+/* Estilos de cada módulo */ 
+.seccion {
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.seccion h2 {
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-family: "Tomorrow", sans-serif;
+}
+
+.contenido {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease;
+    padding: 0 10px;
+}
+
+.seccion:hover {
+    background-color: gray;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+/*------------------------------------------------*/
+
+/* --- TOPBAR SUPERIOR --- */
+.topbar {
+    width: 100%;
+    background: linear-gradient(90deg, #8b0000, #b30000, #ff0000);
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 2000; /* Para que quede encima del header original */
+}
+
+.topbar-contenido {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.topbar-logo {
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: "Tomorrow", sans-serif;
+    color: white;
+}
+
+.topbar-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.topbar-menu a {
+    padding: 8px 14px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease;
+}
+
+.topbar-menu a:hover {
+    background: white;
+    color: #b30000;
+    transform: translateY(-2px);
+}
+
+/*--- FIN TOPBAR SUPERIOR --- */
+
+/*HEADER*/
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(15, 15, 65);
+    color: white;
+    border-radius: 10px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: darkred;
+    font-family: "Tomorrow", sans-serif;
+}
+
+p {
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 20px;
+    line-height: 1.6;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(110, 0, 0);
+    color: white;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    text-align: center;
+}
+
+figure {
+    text-align: center;
+}
+
+/* --- IMÁGENES EN MÓDULOS --- */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.image-container img {
+    max-width: 25%;
+    height: auto;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+/* --- CARRUSEL ULTRA SUAVE RESPONSIVE (100% ancho pantalla) --- */
+.carousel {
+    width: 100%;
+    height: 35vh; /*Asi no es gigante y es proporcional*/
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative; 
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 70s linear infinite;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Desplazamos el ancho de 6 imágenes reales */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-600%); /* 6 imágenes reales */
+    }
+}
+
+.caption {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------
+   RESPONSIVE PARA CELULARES
+------------------------------ */
+@media (max-width: 768px) {
+
+    /* Topbar */
+    .topbar-contenido {
+        flex-direction: column;
+        gap: 10px;
+        padding: 5px 0;
+    }
+
+    .topbar-logo {
+        font-size: 1.3rem;
+    }
+
+    .topbar-menu {
+        gap: 5px;
+    }
+
+    .topbar-menu a {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+
+
+    /* Texto general */
+    p {
+        margin: 0 10px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+
+    /* Secciones */
+    .seccion {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .seccion h2 {
+        font-size: 1.1rem;
+    }
+
+
+    /* Imágenes en módulos */
+    .image-container {
+        flex-wrap: wrap;
+    }
+
+    .image-container img {
+        max-width: 48%;
+    }
+
+
+    /* Carrusel */
+    .carousel {
+        height: 55vw; 
+    }
+
+    .carousel img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-track {
+        width: calc(100% * 12);
+    }
+
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-100% * 6)); }
+    }
+
+}

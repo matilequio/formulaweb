@@ -1,0 +1,190 @@
+/* -----------------------------
+   ESTILOS GENERALES
+----------------------------- */
+body {
+    font-family: "Tomorrow", sans-serif;
+    /*Agregamos una imagen de fondo*/
+    background: url("imag/f1backnosot.jpg") no-repeat center center fixed;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-family: "Tomorrow", sans-serif;
+}
+
+.intro {
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 0 15px;
+    line-height: 1.6;
+}
+
+/* -----------------------------
+   NAVBAR (coincide con index.css)
+----------------------------- */
+.topbar {
+    width: 100%;
+    background: linear-gradient(90deg, #8b0000, #b30000, #ff0000);
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 2000; /* Para que quede encima del header original */
+}
+
+.topbar-contenido {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.topbar-logo {
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: "Tomorrow", sans-serif;
+    color: white;
+}
+
+.topbar-menu a {
+    padding: 8px 14px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease;
+}
+
+.topbar-menu a:hover {
+    background: white;
+    color: #b30000;
+    transform: translateY(-2px);
+}
+
+/* -----------------------------
+   ESPACIADO PRINCIPAL
+----------------------------- */
+.main-container {
+    padding-top: 120px; /* separa del menú */
+    padding-bottom: 40px;
+}
+
+/* -----------------------------
+   FORMULARIO
+----------------------------- */
+.form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: #2a2a2a;
+    color: white;
+    font-size: 14px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #e10600;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-family: "Tomorrow", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #b00500;
+}
+
+/* -----------------------------
+   MENSAJES
+----------------------------- */
+.error {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+.success {
+    color: #4dff4d;
+    font-size: 15px;
+    margin-top: 15px;
+    text-align: center;
+    display: none;
+}
+
+/* -----------------------------
+   FOOTER
+----------------------------- */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #111;
+    margin-top: 40px;
+    color: #ccc;
+    font-size: 12px;
+}
+
+/* --- RESPONSIVE PARA MOBILE --- */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 600px) {
+    .intro {
+        padding: 0 10px;
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .form-container {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}

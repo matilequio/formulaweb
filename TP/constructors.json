@@ -1,0 +1,16 @@
+{  
+  "season": "2025",  
+  "as_of": "after Brazilian GP",  
+  "constructors": [  
+    { "position": 1, "name": "McLaren", "shortName": "MCL", "points": 756 },  
+    { "position": 2, "name": "Mercedes", "shortName": "MER", "points": 398 },  
+    { "position": 3, "name": "Red Bull Racing", "shortName": "RBR", "points": 366 },  
+    { "position": 4, "name": "Ferrari", "shortName": "FER", "points": 362 },  
+    { "position": 5, "name": "Williams", "shortName": "WIL", "points": 111 },  
+    { "position": 6, "name": "Racing Bulls", "shortName": "RB", "points": 82 },  
+    { "position": 7, "name": "Aston Martin", "shortName": "AMR", "points": 72 },  
+    { "position": 8, "name": "Haas", "shortName": "HAA", "points": 70 },  
+    { "position": 9, "name": "Sauber", "shortName": "SAU", "points": 62 },  
+    { "position": 10, "name": "Alpine", "shortName": "ALP", "points": 22 }  
+  ]  
+}

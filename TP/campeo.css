@@ -1,0 +1,294 @@
+/* --- TOPBAR (MENÚ SUPERIOR FIJO) --- */
+.topbar {
+    width: 100%;
+    background: linear-gradient(90deg, #8b0000, #b30000, #ff0000);
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+
+.topbar-contenido {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.topbar-logo {
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: "Tomorrow", sans-serif;
+    color: white;
+}
+
+.topbar-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.topbar-menu a {
+    padding: 8px 14px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Tomorrow", sans-serif;
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease;
+}
+
+.topbar-menu a:hover {
+    background: white;
+    color: #b30000;
+    transform: translateY(-2px);
+}
+/*--- FIN TOPBAR SUPERIOR --- */
+
+/*FONDO DE IMAGEN*/
+body {
+    background: url("imag/f1bannerbgr.jpg") no-repeat center center scroll;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* --- FIN FONDO --- */
+
+/* Campeonatos */
+/* --- CONTENIDO GENERAL --- */
+.contenedor {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 2rem;
+    color: lightcoral;
+    /*Le agregamos un fondo al texto para que resalte más y no se confunda con el fondo y un borde blanco a las letras*/
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+/* --- SECCIONES DE TABLAS --- */
+.tabla-seccion {
+    background-color: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
+}
+
+.subtitulo {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+/* --- TABLAS --- */
+.tabla p {
+    background-color: rgba(0,0,0,0.25);
+    margin: 10px 0;
+    padding: 10px 16px;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.1rem;
+}
+
+/* posicion */
+.pos {
+    width: 35px;
+    font-weight: bold;
+    color: #ff3b3b;
+}
+
+/* nombre piloto/equipo */
+.nombre {
+    flex: 1;
+    padding-left: 15px;
+}
+
+/* puntos */
+.puntos {
+    font-weight: bold;
+    color: #ffd700;
+}
+
+/* -------------------- */
+/*   GRILLA ESTILO F1TV  */
+/* -------------------- */
+
+/* Contenedor de la fila */
+.tabla p {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 14px 18px;
+    border-radius: 12px;
+
+    display: grid;
+    grid-template-columns: 40px 1fr 80px;
+    align-items: center;
+
+    font-size: 1.1rem;
+    gap: 10px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.tabla p:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.02);
+}
+
+/* posición */
+.pos {
+    font-weight: bold;
+    color: #ff2d2d;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* nombre */
+.nombre {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+}
+
+/* puntos */
+.puntos {
+    font-weight: bold;
+    color: #ffd700;
+    text-align: right;
+    font-size: 1.2rem;
+}
+/* --- FIN TABLAS --- */
+
+
+/* Colores por equipo SOLO en hover */
+/* McLaren */
+.team-mclaren:hover {
+    background-color: #ff8c00 !important;
+}
+
+/* Red Bull Racing */
+.team-redbullracing:hover {
+    background-color: #1e2a78 !important;
+}
+
+/* Ferrari */
+.team-ferrari:hover {
+    background-color: #d50000 !important;
+}
+
+/* Mercedes */
+.team-mercedes:hover {
+    background-color: #00d2be !important;
+}
+
+/* Aston Martin */
+.team-astonmartin:hover {
+    background-color: #006f62 !important;
+}
+
+/* Williams */
+.team-williams:hover {
+    background-color: #00a3e0 !important;
+}
+
+/* Racing Bulls */
+.team-racingbulls:hover {
+    background-color: #4e5bce !important;
+}
+
+/* Haas */
+.team-haas:hover {
+    background-color: #808080 !important;
+}
+
+/* Sauber */
+.team-sauber:hover {
+    background-color: #003d30 !important;
+}
+
+/* Alpine */
+.team-alpine:hover {
+    background-color: #0071c5 !important;
+}
+/* --- FIN COLORES --- */
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(110, 0, 0);
+    color: white;
+    width: 100%;
+    bottom: 0;
+}
+
+/* ------------------------------ */
+/*   VISTA MOBILE   */
+/* ------------------------------ */
+
+@media (max-width: 600px) {
+    .tabla p {
+        grid-template-columns: 35px 1fr;
+        grid-template-rows: auto auto;
+        gap: 4px;
+        padding: 10px 12px;
+    }
+
+    .puntos {
+        grid-column: 2;
+        grid-row: 2;
+        text-align: left;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+
+    .nombre {
+        font-size: 1rem;
+        white-space: normal;
+    }
+
+    .pos {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .contenedor {
+        padding-top: 90px;
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .topbar-contenido {
+        flex-direction: column;
+        gap: 10px;
+        padding: 5px 0;
+    }
+
+    .topbar-menu a {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    .titulo {
+        font-size: 1.4rem;
+        padding: 8px;
+    }
+}
+/* ------------------------------ */
